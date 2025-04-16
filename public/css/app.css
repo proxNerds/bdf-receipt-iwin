@@ -1,0 +1,953 @@
+/* Fonts */
+
+
+@font-face {
+    /* font-family: 'NiveaBoldTextScreen'; */
+    font-family: var(--BrandHeadlinesFontFamilyType, "NiveaBoldTextScreen"), system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    src: url('../../fonts/western-european/NiveaBoldTextScreen/nivbots-webfont.woff') format('woff'), url('../../fonts/western-european/NiveaBoldTextScreen/nivbots-webfont.svg#webfont') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    /* font-family: 'NiveaBold'; */
+    font-family: var(--BrandHeadlinesFontFamilyType, "NiveaBold"), system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    src: url('../../fonts/western-european/nivbots-webfont.woff') format('woff'), url('../../fonts/western-european/nivbots-webfont.svg#webfont') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    /* font-family: 'NiveaLight'; */
+    font-family: var(--BrandHeadlinesFontFamilyType, "NiveaLight"), system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    src: url('../../fonts/western-european/nivea_light-webfont.woff') format('woff'), url('../../fonts/western-european/nivea_light-webfont.svg#webfont') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    /* font-family: 'NiveaMedium'; */
+    font-family: var(--BrandHeadlinesFontFamilyType, "NiveaMedium"), system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    src: url('../../fonts/western-european/nivea_medium-webfont.woff') format('woff'), url('../../fonts/western-european/nivea_medium-webfont.svg#webfont') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    /* font-family: 'NiveaBook'; */
+    font-family: var(--BrandHeadlinesFontFamilyType, "NiveaRegular"), system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    src: url('../../fonts/western-european/nivea_book-webfont.woff') format('woff'), url('../../fonts/western-european/nivea_book-webfont.svg#webfont') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    /* font-family: 'NiveaExtraBold'; */
+    font-family: var(--BrandHeadlinesFontFamilyType, "NiveaExtraBold"), system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    src: url('../../fonts/NIVEA-Brand-Type-Web/WOFF/NIVEABrandTypeTT-ExtraBold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    /* font-family: 'NiveaRegular'; */
+    font-family: var(--BrandHeadlinesFontFamilyType, "NiveaRegular"), system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    src: url('../../fonts/NIVEA-Brand-Type-Web/WOFF/NIVEABrandTypeTT-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+#proxyFrameContent .btnCenter {
+	display: inline-block;
+	border: 1px solid #0f60ff;
+}
+/*
+* OVERLAYER
+*/
+.overlayer {
+    position: fixed;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-size: 100% auto;
+    z-index: 9;
+    top: 0px;
+    left: 0px;
+    display: none;
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.overlayer .contentBlock {
+    width: auto;
+    margin: auto;
+    position: relative;
+}
+
+.overlayer .imageBlock {
+    height: 100%;
+    display: grid;
+    z-index: 1;
+}
+
+.overlayer .closeBtn {
+    text-align: right;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.center-fit {
+    max-width: 100%;
+    max-height: 90vh;
+    margin: auto;
+}
+
+.imageModalBtn {
+    cursor: zoom-in;
+}
+
+body #proxyFrameContent {
+    /* background-color: #E4EAF6; */
+    color: #0032a0;
+    font-family: var(--BrandHeadlinesFontFamilyType, "NiveaRegular"), system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+.modal-backdrop {
+    /* bug fix - no overlay */
+    display: none;
+}
+
+#proxyFrameContent .hidden {
+    display: none;
+}
+
+/*
+* FORM
+*/
+#proxyFrameContent {
+    -webkit-font-smoothing: antialiased;
+    font-family: var(--BrandHeadlinesFontFamilyType, "NiveaRegular"), system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+#proxyFrameContent .container {
+    position: relative;
+    padding-left: 23px;
+    /* padding-top: 4px; */
+    margin-bottom: 0px;
+    cursor: pointer;
+    font-size: 16px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#proxyFrameContent .divider {
+    position: absolute;
+    bottom: 3px;
+    right: -3px;
+}
+
+#proxyFrameContent .submitBtn .spinner-border {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    display: none;
+    margin-left: -1rem;
+    margin-top: -1rem;
+}
+
+#proxyFrameContent .submitBtn:disabled .spinner-border {
+    display: block;
+}
+
+#proxyFrameContent .submitBtn:disabled span.text {
+    opacity: 0;
+}
+
+#proxyFrameContent .btn-primary .spinner-border {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    display: none;
+    margin-left: -1rem;
+    margin-top: -1rem;
+}
+
+#proxyFrameContent .btn-primary:disabled .spinner-border {
+    display: block;
+}
+
+#proxyFrameContent .btn-primary:disabled span.text {
+    opacity: 0;
+}
+
+
+#step1 {
+    display: none;
+}
+
+#step2 {
+    display: none;
+}
+
+#step3 {
+    display: none;
+}
+
+#paymentDetails {
+    display: none;
+}
+
+#paymentDetails label.pp,
+#paymentDetails label.bb {
+    display: none;
+}
+
+#toSend {
+    display: none;
+}
+
+#completed {
+    display: none;
+}
+
+#completed .confimed {
+    display: none;
+}
+
+#completed .notConfirmed {
+    display: none;
+}
+
+#scaduttoTest {
+    display: none;
+}
+
+#thankyou {
+    display: none;
+}
+
+#output_image1 {
+    display: flex;
+    max-width: 300px;
+    max-height: 300px;
+}
+
+#output_image2 {
+    display: flex;
+    max-width: 300px;
+    max-height: 300px;
+}
+
+/* #proxyFrameContent .border{border: 3px solid; border-top-left-radius: 40px;border-bottom-right-radius: 40px;border-image: radial-gradient(rgb(0,143,104), rgb(250,224,66)) 1;} */
+#proxyFrameContent .border {
+    border-width: 3px;
+    border-style: solid;
+    border-color: #0076CB;
+    border-top-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    margin: 0.5rem;
+}
+
+#proxyFrameContent .greyBox {
+	font-family: 'NIVEABrandType-Regular' !important;
+	color: #0032a0 !important;
+
+    background: #ffffff;
+    border-radius: 10px;
+}
+
+#proxyFrameContent .greyBox p,
+#proxyFrameContent .niveaBlue {
+    color: #0f60ff
+}
+
+
+
+/* #proxyFrameContent .whiteBox{background: #ffffff; border-radius: 10px;}
+#proxyFrameContent .whiteBox p, #proxyFrameContent .white{color:#4e4e4e!important} */
+/* #proxyFrameContent h3 {
+    font-family: var(--BrandHeadlinesFontFamilyType, "NiveaBold"), system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    color: #0032a0;
+    font-size: 2.5rem;
+} */
+
+/* #proxyFrameContent h3 span {
+    font-family: var(--BrandHeadlinesFontFamilyType, "NiveaMedium"), system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    ;
+    font-size: 1rem;
+    line-height: 1rem !important;
+} */
+
+#proxyFrameContent h4 {
+    font-family: var(--BrandHeadlinesFontFamilyType, "NiveaBold"), system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    color: #0032a0;
+    font-size: 1.5rem;
+}
+
+#proxyFrameContent p {
+    font-size: 1.25rem;
+    color: #0032a0;
+}
+
+#proxyFrameContent p.bold {
+    font-family: var(--BrandHeadlinesFontFamilyType, "NiveaBold"), system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+#proxyFrameContent p.note {
+    font-size: 1rem;
+    color: #0032a0;
+}
+
+#proxyFrameContent .btn-primary {
+    font-family: var(--BrandHeadlinesFontFamilyType, "NiveaBold"), system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    border-radius: 40px;
+    font-size: 0.875rem;
+    font-weight: bold ;
+    padding: 16px 38px;
+}
+
+#proxyFrameContent p span.number {
+    width: 28px;
+    height: 28px;
+    line-height: 28px;
+    border-radius: 50%;
+    color: #fff;
+    background: #0032a0;
+    display: inline-block;
+    margin-top: 25px;
+}
+
+#proxyFrameContent #addBtn,
+#proxyFrameContent .removeBtn {
+    height: 38px;
+    font-size: 1.5rem;
+    font-family: var(--BrandHeadlinesFontFamilyType, "NiveaLight"), system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    padding: 0px;
+    min-width: 38px;
+    line-height: 38px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* #proxyFrameContent #addBtn{ width: 280px; font-family: 'NiveaBook'; font-size: 1.0rem;font-weight: 400; } */
+
+#proxyFrameContent .custom-file-label {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1;
+    /* height: calc(1.5em + .75rem + 2px); */
+    height:50px;
+    /* padding: .375rem .75rem; */
+    padding: 14px 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #0f60ff;
+    border: 1px solid #0f60ff !important;
+    border-radius: 5px;
+    background: #f5f5f5;
+    font-family: var(--BrandHeadlinesFontFamilyType, "NiveaRegular"), system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+#proxyFrameContent .custom-file-label::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 3;
+    display: block;
+    /* height: calc(1.5em + .75rem + 2px); */
+    height:50px;
+    /* padding: .375rem 2rem; */
+    padding: 14px 16px;
+    line-height: 1.5;
+    color: #fff;
+    content: "sfoglia";
+    background-color: #0f60ff;
+    border-left: inherit;
+    border-radius: 5px;
+}
+
+@media (max-width: 991.98px) {
+ /*    #proxyFrameContent h3 {
+        font-family: var(--BrandHeadlinesFontFamilyType, "NiveaBold"), system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+        color: #0032a0;
+        font-size: 1.6rem;
+    } */
+
+    /* #proxyFrameContent h4{font-family: var(--BrandHeadlinesFontFamilyType,"NiveaBold"),system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif; color: #0032a0; font-size: 1rem;} */
+    #proxyFrameContent h4 {
+        font-family: var(--BrandHeadlinesFontFamilyType, "NiveaBold"), system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+        ;
+        color: #0032a0;
+        font-size: 1rem;
+    }
+
+    #proxyFrameContent p {
+        font-size: 0.8rem;
+        color: #0032a0;
+    }
+
+    #proxyFrameContent p.note {
+        font-size: 0.8rem;
+        color: #0032a0;
+    }
+
+    #proxyFrameContent .checkbox label,
+    #proxyFrameContent .checkbox_newsletter label {
+        font-size: 0.8rem !important;
+    }
+}
+
+
+#proxyFrameContent.form-control {
+    border: 1px solid #0f60ff !important;
+    border-radius: 5px;
+    background: #f5f5f5;
+    color: #0f60ff !important;
+}
+
+#proxyFrameContent.form-control .is-valid {
+
+    background: #f5f5f5 !important;
+
+}
+
+
+
+
+#proxyFrameContent .form-control.is-invalid {
+    background-color: #ffd3d4 ;
+    border: 1px solid red;
+    color: red !important;
+}
+
+#proxyFrameContent .form-control.special {
+    border: 1px solid #0032a0 !important;
+    border-radius: 5px;
+    background: #fff;
+    color: #0032a0;
+}
+
+#proxyFrameContent .form-control.special:disabled {
+    border: none !important;
+    padding: 0px;
+    border-radius: 5px;
+    background: #fff;
+    color: #0032a0;
+    font-family: var(--BrandHeadlinesFontFamilyType, "NiveaBold"), system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+/* #proxyFrameContent label{font-family: var(--BrandHeadlinesFontFamilyType,"NiveaBold"),system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif; color: #0032a0; font-size: 1rem;} */
+#proxyFrameContent label {
+    font-family: var(--BrandCopyFontFamilyType, "NiveaRegular"), system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    color: #0032a0;
+    font-size: 0.875rem;
+}
+
+#proxyFrameContent label.inline {
+    line-height: 38px;
+}
+
+#proxyFrameContent .text-muted {
+    font-size: 0.7rem;
+}
+
+#proxyFrameContent .g-recaptcha div {
+    display: inline-block;
+}
+
+#proxyFrameContent input {
+	 font-family: var(--BrandCopyFontFamilyType, "NiveaRegular"), system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    background-color: rgb(245, 245, 245);
+    height:50px;
+    font-size: 1rem;
+    line-height: 1.44444444rem;
+}
+
+
+/*
+* CHECKBOXES NIVEA
+*/
+
+/* Hide the browser's default checkbox */
+#proxyFrameContent .container input[type="radio"],
+#proxyFrameContent .container input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+
+
+/* Create a custom checkbox */
+#proxyFrameContent .checkmark {
+    position: absolute;
+    top: 4px;
+    left: 0;
+    height: 16px;
+    width: 16px;
+    border-radius: 16px;
+    background-color: rgb(245, 245, 245);
+}
+
+
+
+.squared {
+
+    border-radius: 0!important;
+
+}
+
+/* On mouse-over, add a grey background color */
+#proxyFrameContent .container:hover input~.checkmark {
+    background-color: rgb(245, 245, 245);
+}
+
+/* When the checkbox is checked, add a blue background */
+#proxyFrameContent .container input:checked~.checkmark {
+    background-color: #0f60ff;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+#proxyFrameContent .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+#proxyFrameContent .container input:checked~.checkmark:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+#proxyFrameContent .container .checkmark:after {
+    left: 4px;
+    width: 6px;
+    height: 12px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+/*******START::NEWUI****************/
+
+#proxyFrameContent p.niveaBlue {
+    font-size: 0.77777778rem;
+		 font-family: var(--BrandCopyFontFamilyType), system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+
+}
+
+#proxyFrameContent .did-floating-label label {
+    font-size: 14px;
+}
+
+#proxyFrameContent .vex-dialog-form form {
+    display: flex;
+    text-align: center;
+
+}
+#proxyFrameContent .is-invalid {
+    color: red !important;
+}
+
+/*** NEW INPUT LABEL STYLE ***/
+
+#proxyFrameContent  .did-floating-label-content {
+    position:relative;
+   /*  margin-bottom:20px; */
+  }
+#proxyFrameContent  .did-floating-label {
+    color:#0032a0;
+    font-weight:normal;
+    position:absolute;
+    pointer-events:none;
+    left:15px;
+    top:11px;
+    padding:0 5px;
+    transition:0.2s ease all;
+    -moz-transition:0.2s ease all;
+    -webkit-transition:0.2s ease all;
+  }
+
+  #proxyFrameContent .did-floating-input {
+    border:1px solid #0f60ff;
+  }
+
+  #proxyFrameContent .did-floating-input .is-valid{
+    color:#0f60ff !important;
+  }
+
+  #proxyFrameContent .did-floating-input, .did-floating-select {
+    font-size:18px;
+    display:block;
+    width:100%;
+    height:45px;
+    padding: 10px 20px 0px 20px;
+    color: #0f60ff;
+   /*  color: #323840; */
+   /*  border: 1px solid #3D85D8; */
+   /*  border-radius: 5px; */
+    box-sizing: border-box;
+    &:focus{
+      outline:none;
+      ~ .did-floating-label{
+        top:3px;
+        font-size:9px;
+      }
+    }
+  }
+
+  #proxyFrameContent .did-floating-input, .did-floating-select
+
+  #proxyFrameContent select.did-floating-select {
+    -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+  }
+  #proxyFrameContent select.did-floating-select::-ms-expand {
+    display: none;
+  }
+
+  #proxyFrameContent .did-floating-input:not(:placeholder-shown) ~ .did-floating-label {
+    top:3px;
+    font-size:10px;
+  }
+
+  #proxyFrameContent .did-floating-select:not([value=""]):valid ~ .did-floating-label {
+    top:-8px;
+    font-size:13px;
+  }
+  #proxyFrameContent  .did-floating-select[value=""]:focus ~ .did-floating-label {
+    top:11px;
+    font-size:13px;
+  }
+
+  #proxyFrameContent .form-control:focus,
+#proxyFrameContent .form-control:focus-visible {
+    border: 1px solid #0f60ff;
+    outline: 0;
+    box-shadow: none;
+    background-color: #f5f5f5 !important;
+    color: #0f60ff;
+    /* border: 2px solid #848484 !important;
+    border-radius: 10px;
+    background: #ffffff; */
+}
+
+/* BEA => custom global rules UI placeHolder */
+
+#proxyFrameContent .form-control::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #f5f5f5;
+    font-weight: 600;
+    opacity: 1; /* Firefox */
+}
+
+#proxyFrameContent .form-control::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #f5f5f5;
+    font-weight: 600;
+    opacity: 1; /* Firefox */
+}
+
+
+#proxyFrameContent .form-control::-ms-input-placeholder { /* Microsoft Edge */
+    color: #f5f5f5;
+
+}
+
+/********::END::NEWUI******/
+/*
+  * SELECT NIVEA
+  */
+
+/*select-skin*/
+.select-skin {
+
+    background-color: rgb(245, 245, 245);
+    color: #0f60ff;
+    border: 1px solid #0f60ff;
+    /* height: calc(1.5em em + 0.75rem + 10px); */
+    height:50px;
+    font-size: 0.825rem;
+    font-weight: 700;
+    line-height: 1.44444444rem;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 100%;
+    appearance: none;
+    -moz-appearance: none;
+    /* Firefox */
+    -webkit-appearance: none;
+    /* Safari and Chrome */
+    padding-left: 16px;
+    outline:none;
+    background-image: url('data:image/svg+xml;utf8,<svg width="10px" height="5px" viewBox="0 0 16 9" xmlns="http://www.w3.org/2000/svg"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"><polyline stroke="rgb(0, 50, 160)" stroke-width="3" points="1.5 1.5 7.5925533 7.5 13.6851066 1.5"></polyline></g></svg>');
+    background-repeat: no-repeat;
+    background-position-x: 95%;
+    background-position-y: center;
+
+}
+
+
+
+.select-skin option {
+    font-size: 0.825rem;
+}
+
+.form-control.is-valid {
+    border: 1px solid #0f60ff !important;;
+
+}
+.select-skin:focus, .select-skin:focus-visible{
+    border:none;
+    outline:none;
+    border-color: #0f60ff !important;;
+
+}
+.select-skin:active{
+    border-color: #0f60ff !important;;
+
+}
+
+/*
+* CUSTOM CHECKBOXES
+*/
+/* #proxyFrameContent input[type="checkbox"] {
+    -webkit-appearance: none;
+    position: relative;
+    outline: none;
+    opacity: 0;
+    height: 20px;
+    vertical-align: middle;
+    margin-top: 0;
+}
+
+#proxyFrameContent .checkbox input,
+#proxyFrameContent .checkbox_newsletter input {
+    display: table-cell;
+}
+
+.checkbox input[type=checkbox],
+.checkbox-inline input[type=checkbox],
+.radio input[type=radio],
+.radio-inline input[type=radio] {
+    float: left;
+    margin-left: -20px;
+}
+
+.checkbox_newsletter input[type=checkbox] {
+    float: left;
+    margin-left: -20px;
+}
+
+#proxyFrameContent input[type="checkbox"]+label:before {
+    background-color: white;
+    border: 1px solid #cdcdcd;
+    height: 22px;
+    top: 0;
+    left: 0;
+    width: 22px;
+    z-index: 1;
+}
+
+#proxyFrameContent input[type="checkbox"]+label:before,
+#proxyFrameContent input[type="checkbox"]+label:after {
+    content: "";
+    box-sizing: border-box;
+    cursor: pointer;
+    position: absolute;
+}
+
+#proxyFrameContent .checkbox label,
+#proxyFrameContent .checkbox_newsletter label {
+    box-sizing: border-box;
+    position: relative;
+    padding-left: 33px;
+    margin-bottom: 0;
+    vertical-align: middle;
+    font-size: 1rem;
+    color: #00136f;
+    font-family: var(--BrandHeadlinesFontFamilyType, "NiveaRegular"), system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+#proxyFrameContent input[type="checkbox"]:checked+label:after {
+    border: 3px solid #00136f;
+    border-right: none;
+    border-top: none;
+    height: 8px;
+    left: 4px;
+    top: 5px;
+    width: 14px;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    z-index: 2;
+} */
+
+
+
+/*
+* RADIO BUTTON
+*/
+#proxyFrameContent input[type="radio"] {
+    height: 24px;
+    margin-right: 15px;
+}
+
+/******** INVALIDE TOOLTIP *********/
+
+.invalid-tooltip {
+    position:initial;
+    z-index: 1;
+    top: 80%;
+    right: 15px;
+    left: 10%;
+    color: red;
+    /* text-align: right; */
+    font-size: 12px;
+    font-weight: 500;
+    /* background-color: #f9d3d4; */
+   /*  box-shadow: rgba(0, 0, 0, 0.45) 0px 2px 4px; */
+ background-color: transparent;
+}
+
+#proxyFrameContent  label .is-invalid   {
+    color: red !important;
+}
+
+
+/*
+* DATE PICKER
+*/
+.ui-widget-header {
+    background: #04136a !important;
+    background-image: none;
+    border-color: #04136a;
+}
+
+.ui-datepicker .ui-datepicker-prev,
+.ui-datepicker .ui-datepicker-next {
+    height: 2.4em;
+}
+
+.ui-state-hover,
+.ui-widget-content .ui-state-hover,
+.ui-widget-header .ui-state-hover,
+.ui-state-focus,
+.ui-widget-content .ui-state-focus,
+.ui-widget-header .ui-state-focus {
+    border: 1px solid #fff;
+    background: #fff;
+    font-weight: bold;
+    color: #04136a;
+}
+
+.ui-state-hover .ui-icon,
+.ui-state-focus .ui-icon {
+    background-image: url(images/ui-icons_04136a_256x240.png);
+}
+
+.ui-datepicker select.ui-datepicker-month,
+.ui-datepicker select.ui-datepicker-year {
+    color: #04136a;
+}
+
+.ui-state-active,
+.ui-widget-content .ui-state-active,
+.ui-widget-header .ui-state-active {
+    border: 1px solid #04136a;
+    color: #04136a;
+}
+
+.ui-state-highlight,
+.ui-widget-content .ui-state-highlight,
+.ui-widget-header .ui-state-highlight {
+    background: #04136a !important;
+    color: #fff;
+    border-color: #ccc;
+}
+
+#proxyFrameContent .border_products {
+    /* border: solid 1px #00136f!important; */
+}
+
+
+
+/* togliere gli helper */
+.helper {
+    display: none !important;
+}
+
+
+.text-green-gradient {
+    font-size: 72px;
+    background: -webkit-radial-gradient(#3cae50, #0e6754);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.green-btn {
+    border: none !important;
+    background-color: #0d6c5a !important;
+}
+
+.niveaBlue {
+    color: #0032a0 !important;
+}
+
+.accorgimento {
+    font-size: .6rem !important;
+}
+
+
+.secondaryTitle {
+    font-family: var(--BrandHeadlinesFontFamilyType, "NiveaBold"), system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    color: #0032a0 !important;
+}
+
+ /*** MEDIA QUERIES **/
+
+ @media screen and (max-width: 374px ) {
+
+
+    #proxyFrameContent  .receipt_hour  {
+
+        font-size:9px;
+
+      }
+
+      #proxyFrameContent  .receipt_minute  {
+
+        font-size:9px;
+
+      }
+      #proxyFrameContent  .inputCentesimi {
+
+        font-size:9px;
+
+      }
+
+    #proxyFrameContent   #privacylabel {
+        font-size: 13px;
+    }
+    #proxyFrameContent   #privacyAgelabel {
+        font-size: 13px;
+    }
+  }
+
+  @media screen and (max-width: 575px ) {
+    #proxyFrameContent .did-floating-label {
+        font-size: 10px
+    }
+  }
